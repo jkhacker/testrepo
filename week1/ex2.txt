@@ -1,0 +1,22 @@
+./ex4
+cc ex4.c -o ex4
+micro ex4.c
+./ex3.sh
+chmod +x ex3.sh
+micro ex3.sh
+cd week1/
+cat week1/ex1.txt
+sleep 2
+date
+ssh git@github.com:pakrentos/anothertesting.git
+micro test.sh
+cat week1/ex2.txt
+ls /usr/bin
+ssh nikitasmirnov@10.90.137.100
+ssh root@10.90.137.100
+less week1/ex2.txt
+file week1/ex2.txt
+touch week1/ex2.txt
+history > week1/ex2.txt
+ls -a /usr/bin/ | grep gcc > week1/ex1.txt
+mkdir week1
