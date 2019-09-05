@@ -72,15 +72,15 @@ int insert_node(List *list, int data, unsigned int index)
 	return EXIT_SUCCESS;
 }
 
-int delete_node(List *list, unsigned int index)
+int delete_node(List *list, int data)
 {
-	if(index >= list->size)
+	if(list->size == 0)
 	{
 		return EXIT_ERROR;
 	}
 	Node *temp = list->head;
 	Node *del = NULL;
-	if(index == 0)
+	if(list->head->data == data)
 	{
 		temp = list->head->next;
 		free(list->head);
@@ -88,9 +88,17 @@ int delete_node(List *list, unsigned int index)
 		list->size--;
 		return EXIT_SUCCESS;
 	}
-	for(unsigned int i = 0; i < index; i++)
+	if(!list->head->next)
+	{
+		return EXIT_ERROR;
+	}
+	while(temp->next->data != data)
 	{
 		temp = temp->next;
+		if(!temp->next)
+		{
+			return EXIT_ERROR;
+		}
 	}
 	del = temp->next;
 	temp->next = temp->next->next;
