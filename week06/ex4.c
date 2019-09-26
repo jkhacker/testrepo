@@ -2,9 +2,9 @@
 #include <unistd.h>
 #include <signal.h>
 
-void catch_SIGINT()
+void catch_SIGKILL()
 {
-	printf("\nI caught SIGINT!\n");
+	printf("\nI caught SIGKILL!\n");
 }
 
 void catch_SIGSTOP()
@@ -22,7 +22,7 @@ int main()
 {
 	signal(SIGUSR1, catch_SIGUSR1);
 	signal(SIGSTOP, catch_SIGSTOP);
-	signal(SIGINT, catch_SIGINT);
+	signal(SIGKILL, catch_SIGKILL);
 	sleep(10);
 	return 0;
 }
