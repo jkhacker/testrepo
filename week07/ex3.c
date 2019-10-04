@@ -13,6 +13,18 @@ int main() {
 		arr[i] = i;
 		printf("%d ", arr[i]);
 	}
+	printf("\n");
+	
+	printf("Please, enter new size of an array: ");
+	scanf("%d", &N);
+
+	arr = realloc(arr, N*sizeof(int));
+
+	for(int i = 0; i < N; i++) {
+			arr[i] = i;
+			printf("%d ", arr[i]);
+		}
+	
 	
 	free(arr);
 	
