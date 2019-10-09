@@ -1,0 +1,2 @@
+Since size of page is 8KB, then number of offset bits is 13 (2^13 = 8*1024)
+Therefore, number of high-order bits is 16-13=3. Number of entries = 2^3 = 8.

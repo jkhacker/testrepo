@@ -1,0 +1,2 @@
+Physical address - exact address in RAM
+Virtual address - address in abstract memory, which consists of RAM and Disk
