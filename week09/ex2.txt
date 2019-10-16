@@ -1,0 +1,3 @@
+Ageing algo is just an implementation of LRU principle. So we suppose that we will use some page then we will use it later too.
+So if we put same pages near each other we will get higher hit/miss ratio.
+Otherwise vice versa.
