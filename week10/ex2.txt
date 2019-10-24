@@ -1,0 +1,9 @@
+touch ../week01/file.txt
+ln ../week01/file.txt _ex2.txt
+ln ../week01/file.txt _ex2.txt
+ls -i ../week01/file.txt
+	28845994 ../week01/file.txt
+find ~/git_repos/testrepo/ -inum 28845994
+	/Users/nikitasmirnov/git_repos/testrepo//week01/file.txt
+	/Users/nikitasmirnov/git_repos/testrepo//week10/_ex2.txt
+find ~/git_repos/testrepo/ -inum 28845994 -exec rm {} \;

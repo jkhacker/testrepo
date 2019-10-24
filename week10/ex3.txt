@@ -1,0 +1,9 @@
+touch _ex3.txt
+sudo chmod -x _ex3.txt
+sudo chmod u=rwx _ex3.txt
+sudo chmod o=rwx _ex3.txt
+sudo chmod g=rwx _ex3.txt
+
+660 – owner and group can RW while others cannot
+775 – owner and group can do RWX while others can only RX
+777 – every user can do RWX
