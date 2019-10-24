@@ -1,0 +1,5 @@
+Pointed to the same: .
+Pointed to the same: ..
+Pointed to the same: file2
+Pointed to the same: link1, file1
+Pointed to the same: file1
