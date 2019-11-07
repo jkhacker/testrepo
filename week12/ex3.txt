@@ -1,0 +1,37 @@
+Without sync:
+    Default buffer size:
+        real    0m0.035s
+        user    0m0.008s
+        sys     0m0.028s
+    -DBUF_SIZE=1000:
+        real    0m0.031s
+        user    0m0.004s
+        sys     0m0.024s
+    -DBUF_SIZE=10_000:
+        real    0m0.014s
+        user    0m0.004s
+        sys     0m0.008s
+    -DBUF_SIZE=100_000:
+        real    0m0.012s
+        user    0m0.000s
+        sys     0m0.008s
+    -DBUF_SIZE=10:
+        real    0m1.122s
+        user    0m0.124s
+        sys     0m0.992s
+
+The more buffer we have the less split write operations we have, the more performance will be
+
+With sync:
+    Default buffer:
+        real    0m18.965s
+        user    0m0.032s
+        sys     0m0.964s
+    -DBUF_SIZE=100_000:
+        real    0m0.264s
+        user    0m0.004s
+        sys     0m0.032s
+
+Sync requires additional instuctions to be executed, which requires the additional time.
+Sync is done after the each separate write operation, which means, now buffer size will matter much more.
+The more buffer size we will have, the less amount of sync operations will be needed.
